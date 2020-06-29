@@ -1,0 +1,48 @@
+@mixin button {
+    display: inline-block;
+    outline: none;
+    border-radius: 6px;
+    text-decoration: none;
+    font-family: $roboto;
+    font-weight: bold;
+    transition: .2s ease-in-out;
+    letter-spacing: .2px;
+    &:hover {
+        text-decoration: none;
+        box-shadow: 0 3px 12px 0 rgba(0,0,0,0.2);
+    }
+}
+
+.filled {
+    padding: 12px 35px;
+    color: $white;
+    background: linear-gradient(135.57deg, #AF39FC 0%, #8A39FC 100%);
+    border: 0;
+    @include button;
+    &:hover {
+        color: $white;
+    }
+}
+
+#show-all-button,
+#show-all-testimonials {
+    color: $accent;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+h2 {
+    color: $accent_dark;
+    font-family: $montserrat;
+    font-size: 44px;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    line-height: 70px;
+    @media (max-width: 576px) {
+        font-size: 30px;
+        line-height: 42px;
+    }
+    @media (max-width: 325px) {
+        font-size: 24px;
+    }
+}

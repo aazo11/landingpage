@@ -1,0 +1,25 @@
+footer {
+    padding: 33px 0;
+    background: #02000B;
+    .row {
+        display: flex;
+        justify-content: center;
+        @media (max-width: 576px) {
+            padding: 0 15px;
+            text-align: center;
+        }
+        color: $gray_6;
+        a {
+            color: $gray_6;
+            transition: .2s;
+            padding: 0 5px;
+            &:hover {
+                text-decoration: none;
+                color: $white;
+            }
+        }
+        p {
+            margin: 0;
+        }
+    }
+}

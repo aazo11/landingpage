@@ -1,0 +1,130 @@
+header {
+    position: fixed;
+    width: 100%;
+    height: 100px;
+    transition: .2s ease-in-out;
+    z-index: 2;
+    background: $white;
+    @media (max-width: 992px) {
+        height: 50px;
+    }
+    .container {
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        & > a {
+            @media (max-width: 992px) {
+                display: none;
+            }
+        }
+        .logo {
+            width: 123px;
+            @media (max-width: 992px) {
+                width: 90px;
+            }
+            img {
+                width: 100%;
+                padding-bottom: 20px;
+                @media (max-width: 768px) {
+                    padding-bottom: 0;
+                }
+            }
+        }
+        .navigation {
+            @media (max-width: 992px) {
+                display: none;
+                &.visible {
+                    display: block;
+                }
+            }
+        }
+        .navigation ul {
+            @media (max-width: 992px) { 
+                display: flex;
+                flex-direction: column;
+                padding: 0;
+                padding-top: 40px;
+                li {
+                    text-align: center;
+                    a {
+                        color: white;
+                        font-size: 32px;	
+                        font-weight: 500;	
+                        line-height: 39px;
+                    }
+                }
+            }
+        }
+        .navigation nav {
+            @media (max-width: 992px) { 
+                display: flex;
+            flex-direction: column;
+            position: fixed;
+                width: 100%;
+                height: 100%;
+                top: 50px;
+                left: 0;
+                background: #2F1D3D;
+            }
+            
+        }
+        .navigation nav > a {
+            display: none;
+            @media (max-width: 992px) {
+                display: block;
+                width: 185px;
+                margin: 20px auto 0;
+                text-align: center;
+            }
+        }
+        #mobile-menu-button {
+            @media (min-width: 993px) {
+                display: none;
+            }
+            .hamburger--collapse {
+                outline: none;
+                padding: 0;
+                padding-top: 10px;
+                margin-right: -5px;
+            }
+            .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+                background-color: #8A39FC;
+                width: 30px;
+            }
+        }
+        nav {
+            ul {
+                display: flex;
+                margin: 0;
+                li {
+                    list-style: none;
+                    padding: 15px;
+                    a {
+                        color: $accent_dark;
+                        font-size: 18px;
+                        transition: .2s;
+                        font-family: $roboto;
+                        &.active {
+                            color: $accent;
+                        }
+                        @media (min-width: 1200px) {
+                            &:hover {
+                                color: $accent; 
+                            }
+                        }
+                        @media (max-width: 576px) {
+                            font-family: $montserrat;
+                        }
+                        &:hover {
+                            text-decoration: none;
+                        }
+                    }
+                }
+            }
+        }
+        &>a {
+            padding: 10px 25px 8px;
+        }
+    }
+}
